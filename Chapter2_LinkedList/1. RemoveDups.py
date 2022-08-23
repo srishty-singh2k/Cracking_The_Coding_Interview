@@ -57,12 +57,7 @@ class LinkedList:
                 print(str(itr.data)+"-->", end='')
             itr=itr.next
 
-    def removeDupSorted(self, head):
-        while(head and head.next):
-            if head.data == head.next.data:
-                head.next = head.next.next
-            head = head.next
-
+   
     def removeDupUnsorted(self, head):
         s = set()
         prev = None
@@ -77,18 +72,12 @@ class LinkedList:
 
 
 if __name__ == '__main__':
-
-    #REMOVE DUPLICATES IN SORTED
-    ll1 = LinkedList()
-    ll1.insert_values([1,1,2,3,4,4])
-    ll1.removeDupSorted(ll.head)
-    ll1.traverse()
-
+    ll = LinkedList()
+    
     #REMOVE DUPLICATES IN UNSORTED
-    ll2 = LinkedList()
-    ll2.insert_values([2,6,4,3,2,4,1,1])
-    ll2.removeDupUnsorted(ll.head)
-    ll2.traverse()
+    ll.insert_values([2,6,4,3,2,4,1,1])
+    ll.removeDupUnsorted(ll.head)
+    ll.traverse()
 
 
     
